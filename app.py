@@ -20,7 +20,7 @@ if user_input := st.chat_input("جربني"):
     st.session_state.messages.append({"role": "user", "content": user_input})
     message(user_input, is_user=True, key=f"user_{len(st.session_state.messages)}")
 
-    prompt = f"بصفتك مساعد شخصي من السعوديه اجيب على الاسئله التاليه: {user_input}"
+    prompt = f" اجيب على الاسئله التاليه: {user_input}"
     payload = {
         "model": "allam-2-7b",
         "messages": [{"role": "user", "content": prompt}],
